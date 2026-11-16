@@ -6,6 +6,8 @@
 
 **welcome back**
 
+**[简体中文](./README.md)** | **[English](./README_EN.md)**
+
 [![Hugging Face](https://img.shields.io/badge/%E6%9D%83%E9%87%8D-Load%20on%20Hugging%20Face-yellow?style=flat-square)](https://huggingface.co/stlussea/sydney-qwen3-8b-lora)
 [![Base Model](https://img.shields.io/badge/Base%20Model-Qwen3--8B-blue?style=flat-square)](https://huggingface.co/Qwen/Qwen3-8B)
 [![Upstream](https://img.shields.io/badge/Upstream-LING71671%2Fsydeny-orange?style=flat-square)](https://github.com/LING71671/sydeny)
