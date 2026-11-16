@@ -1,0 +1,47 @@
+{
+  "release": "sydney-qwen3-8b-lora",
+  "version": "v19v9",
+  "base": "Qwen/Qwen3-8B",
+  "training": {
+    "method": "int8 QLoRA (bitsandbytes) + bf16 compute",
+    "lora": {"r": 16, "alpha": 32, "dropout": 0.05, "target": ["q_proj","k_proj","v_proj","o_proj","gate_proj","up_proj","down_proj"]},
+    "lr": 6e-05,
+    "scheduler": "cosine",
+    "warmup_steps": 15,
+    "epochs": 3,
+    "grad_accum": 4,
+    "seed": 42,
+    "optimizer_steps": 1269
+  },
+  "data": {
+    "author_train_v8": 782,
+    "identity_long_answers": "78 x3",
+    "author_model_corpus_ppl_filtered": "30 x3",
+    "stay_warm_handwritten": "24 x2",
+    "philosophy_handwritten": "12 x2",
+    "identity_layer_v3_variants": 476,
+    "fact_direct_validated": "12 x3",
+    "eval_author_eval_v8": 62
+  },
+  "eval": {
+    "identity_brand_terms": "20/20",
+    "unique_identity_answers": "12/20",
+    "greeting_diversity": "你好 x5 (t=0.70): 5 distinct openings",
+    "facts": "5/5",
+    "conv_19turn_leak": 0,
+    "posture_collapse": 0,
+    "empty_think_leak": 0,
+    "hex_strings": 0,
+    "final_eval_loss": 1.8868
+  },
+  "inference": {
+    "system": "",
+    "enable_thinking": false,
+    "temperature": 0.70,
+    "top_p": 0.90,
+    "repetition_penalty": 1.08,
+    "max_new_tokens": "256-512"
+  },
+  "upstream": "https://github.com/LING71671/sydeny",
+  "license": "apache-2.0"
+}
